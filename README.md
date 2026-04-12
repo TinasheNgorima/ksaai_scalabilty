@@ -19,7 +19,7 @@ python run_all.py --install
 python run_all.py
 
 # 3. View report
-cat report/Ngorima2025_Results_Report.md
+cat report/Ngorima2026_Results_Report.md
 ```
 
 ---
@@ -127,7 +127,7 @@ DC and MIC at large n are automatically skipped/subsampled to maintain feasibili
 If using this pipeline, please cite the original paper and data sources:
 
 ```
-Ngorima, T. (2025). Computational Complexity of Correlation-Based Feature Selection:
+Ngorima, T. (2026). Computational Complexity of Correlation-Based Feature Selection:
 A Multi-Domain Scalability Analysis of ξₙ, DC, MI, and MIC. Sohar University.
 
 Matasov, A. & Krasavina, V. (2020). Visualization of superconducting materials.
