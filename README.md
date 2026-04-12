@@ -1,4 +1,4 @@
-# Ngorima (2025) — Computational Complexity Pipeline
+# Ngorima (2026) — Computational Complexity Pipeline
 
 Benchmarking ξₙ, DC, MI, and MIC feature selection methods for computational complexity and scalability across TCGA Pan-Cancer genomics, FRED-MD macroeconomics, and Matasov & Krasavina (2020) superconductivity (`sc_mean.csv`) — with log-log complexity verification, RAM profiling, and parallelisation analysis.
 
