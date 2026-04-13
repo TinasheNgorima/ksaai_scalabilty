@@ -172,9 +172,14 @@ def run_n_scaling_benchmark(
                     print(f"[FALLBACK] ", end="")
 
                 # ── Timed execution (P1: warm-up + 30 reps) ─────────────
+                # MIC via subprocess has ~5s overhead per call; use 5 reps
+                # to keep total time feasible while retaining variance estimate
                 scorer = SCORERS[method]
+                mic_via_subprocess = (method == "mic" and FALLBACK_FLAGS.get("mic"))
+                _reps   = 5       if mic_via_subprocess else n_reps
+                _warmup = 0       if mic_via_subprocess else N_WARMUP
                 result = timed_call(scorer, x_col, y,
-                                    n_warmup=N_WARMUP, n_reps=n_reps)
+                                    n_warmup=_warmup, n_reps=_reps)
 
                 rec = {
                     "scenario":  scenario,
