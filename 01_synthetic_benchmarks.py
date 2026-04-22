@@ -265,7 +265,7 @@ def compute_complexity_exponents(df_timing: pd.DataFrame) -> pd.DataFrame:
         ci_low  = slope - t_crit * se
         ci_high = slope + t_crit * se
 
-        theoretical = THEORETICAL_EXPONENT.get(method, np.nan)
+        theoretical = THEORETICAL_EXPONENT.get({"dc":"DC","mi":"MI","mic":"MIC"}.get(method, method), np.nan)
         t_stat = (slope - theoretical) / se if se > 0 else np.nan
         p_dev  = (2 * scipy_stats.t.sf(abs(t_stat), df=n_pts - 2)
                   if not np.isnan(t_stat) else np.nan)
