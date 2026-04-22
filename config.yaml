@@ -1,19 +1,17 @@
 # config.yaml — KsaaiP2 Pipeline v4_updated
-
+# Single source of truth for ALL parameters across scripts 00–04.
 tcga:
   s3_url: "https://gdc-api.nci.nih.gov/data/TCGA_PANCAN_RNA"
   raw_path: "data/raw/tcga_pancan_rna.csv"
   hk_gene_list: "data/processed/tcga_hk_genes.txt"
   n_rows: 20531
   n_features: 20531
-
 superconductivity:
   url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00464/superconduct.zip"
   raw_path: "data/raw/sc_mean.csv"
   target_col: "critical_temp"
   n_rows: 21263
   n_features: 81
-
 fred_md:
   url: "https://s3.amazonaws.com/files.fred.stlouisfed.org/fred-md/monthly/current.csv"
   raw_path: "data/raw/fred_md.csv"
@@ -21,46 +19,37 @@ fred_md:
   target_transform_code: 5
   n_rows: 804
   n_features: 128
-
 materials_project:
   raw_path: "data/raw/materials_project.csv"
   target_col: "formation_energy_per_atom"
-
 n_reps: 30
 n_reps_mic: 5
 n_warmup: 2
 seed: 42
-
 scenario_a:
   n_min: 1000
   n_max: 1000000
   n_points: 15
   p_fixed: 100
-
 scenario_b:
   n_fixed: 10000
   p_min: 10
   p_max: 10000
   p_points: 12
-
 scenario_c:
   bootstrap_B: 200
   top_k: 20
-
 scenario_d:
   p_fixed: 100
-
 scenario_e:
   n_values: [100000, 1000000]
   p_values: [10, 50, 100, 500]
   n_reps_parallel: 10
-
-mic:
+EIC:
   conda_env: "ngorima_mic"
   worker_script: "src/ngorima2025/mic_worker.py"
   alpha: 0.6
   c: 15
-
 acceptance:
   r2_min: 0.996
   dc_beta_lo: 1.90
@@ -74,19 +63,17 @@ acceptance:
   mic_cov_max: 0.30
   sc_r2_min: 0.990
   hk_gene_min: 3
-
 output:
   complexity_exponents_csv: "results/complexity_exponents.csv"
-  synthetic_timing_csv:     "results/synthetic_timing.csv"
-  real_timing_csv:          "results/real_timing.csv"
-  timing_inferential_csv:   "results/timing_inferential.csv"
-  jaccard_stability_csv:    "results/jaccard_stability.csv"
-  memory_rss_csv:           "results/memory_rss.csv"
-  parallel_speedup_csv:     "results/parallel_speedup.csv"
-  mic_spawn_overhead_json:  "results/mic_spawn_overhead.json"
-  crossover_analysis_csv:   "results/crossover_analysis.csv"
-  open_science_checklist:   "results/open_science_checklist.txt"
-  system_state_json:        "results/system_state.json"
-  tables_dir:               "results/tables"
-
+  synthetic_timing_csv: "results/synthetic_timing.csv"
+  real_timing_csv: "results/real_timing.csv"
+  timing_inferential_csv: "results/timing_inferential.csv"
+  jaccard_stability_csv: "results/jaccard_stability.csv"
+  memory_rss_csv: "results/memory_rss.csv"
+  parallel_speedup_csv: "results/parallel_speedup.csv"
+  mic_spawn_overhead_json: "results/mic_spawn_overhead.json"
+  crossover_analysis_csv: "results/crossover_analysis.csv"
+  open_science_checklist: "results/open_science_checklist.txt"
+  system_state_json: "results/system_state.json"
+  tables_dir: "results/tables"
 checksums_json: "data/raw/.checksums.json"
