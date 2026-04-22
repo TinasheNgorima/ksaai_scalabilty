@@ -71,7 +71,11 @@ def main():
         log.error(f"config.yaml fred_md.target_series = '{FRED_MD_TARGET}' — must be 'INDPRO'")
         sys.exit(1)
 
-    download_if_missing(TCGA_S3_URL, TCGA_RAW_PATH, "TCGA pan-cancer RNA-seq")
+    try:
+        download_if_missing(TCGA_S3_URL, TCGA_RAW_PATH, "TCGA pan-cancer RNA-seq")
+    except Exception as e:
+        log.warning(f"TCGA download skipped (manual download required): {e}")
+        log.warning("Pipeline will use synthetic TCGA proxy for Steps 1-4.")
     download_if_missing(SC_URL, SC_RAW_PATH, "UCI SuperConductivity")
     download_if_missing(FRED_MD_URL, FRED_MD_RAW_PATH, "FRED-MD macroeconomic")
 
