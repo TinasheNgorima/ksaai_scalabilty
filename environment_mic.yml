@@ -1,0 +1,12 @@
+name: ngorima_mic
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.23,<2.0
+  - scipy>=1.9
+  - pip:
+    - setuptools<66
+    - minepy==1.2.6

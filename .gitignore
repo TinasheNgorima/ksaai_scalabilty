@@ -60,3 +60,4 @@ htmlcov/
 !report/.gitkeep
 Miniconda3-latest-Windows-x86_64.exe
 python-manager-26.1.msix
+oryx-build-commands.txt
