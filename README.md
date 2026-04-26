@@ -1,6 +1,6 @@
 # Ngorima (2026) — Computational Complexity Pipeline
 
-[![Pipeline Smoke Test](https://github.com/TinasheNgorima/ksaai_scalabilty/actions/workflows/ci.yml/badge.svg)](https://github.com/TinasheNgorima/ksaai_scalabilty/actions/workflows/ci.yml)
+[![Pipeline Smoke Test](https://github.com/TinasheNgorima/ksaai_scalability/actions/workflows/ci.yml/badge.svg)](https://github.com/TinasheNgorima/ksaai_scalability/actions/workflows/ci.yml)
 [![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
 > **Add Zenodo DOI after first release deposit.**
@@ -38,7 +38,7 @@ Automated reproduction pipeline for:
 
 ```bash
 # 1. Clone
-git clone https://github.com/TinasheNgorima/ksaai_scalabilty.git
+git clone https://github.com/TinasheNgorima/ksaai_scalability.git
 cd ngorima2025-complexity
 
 # 2. Install (pip)
@@ -222,7 +222,7 @@ pytest tests/ -k "ram"         # P2 RAM guard tests only
                  A Multi-Domain Scalability Analysis of $\xi_n$, DC, MI, and MIC},
   institution = {Sohar University},
   year        = {2026},
-  note        = {Code: \url{https://github.com/TinasheNgorima/ksaai_scalabilty}
+  note        = {Code: \url{https://github.com/TinasheNgorima/ksaai_scalability}
                  DOI: 10.5281/zenodo.XXXXXXX}
 }
 ```
